@@ -9,10 +9,12 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Empty test\"",
-    "testFail": "echo \"Empty test\" && exit 1"
+    "testFail": "echo \"Empty test\" && exit 1",
+    "postinstall": "bash ./pre-commit-install.sh"
   },
   "pre-commit": [
-    "test"
+    "test",
+    "testFail"
   ],
   "repository": {
     "type": "git",
