@@ -5,7 +5,7 @@ STASH_NAME="pre-commit-$(date +%s)"
 git stash save -q --keep-index $STASH_NAME
 
 echo "Runnint tests..."
-npm run testFail
+npm run test
 
 # pop out stash
 STASHES=$(git stash list)
