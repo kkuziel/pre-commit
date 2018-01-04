@@ -1,16 +1,14 @@
-# pre-commit.sh
+#!/usr/bin/env node
+console.log('\x1b[1m','Please wait for tests to run...','\x1b[0m');
+console.log('You can','\x1b[1m','skip','\x1b[0m','the precommit hook by running "git commit -n" instead','\x1b[1m', "but beware!",'\x1b[0m');
 
-# pre-commig.sh
-
-# test only commited changes
-STASH_NAME="pre-commit-$(date +%s)"
-git stash save -q --keep-index $STASH_NAME
-
-# scripts to run
-./pre-commit-scripts.sh
-
-# pop out stash
-STASHES=$(git stash list)
-if [[ $STASHES == "$STASH_NAME" ]]; then
-  git stash pop -q
-fi
+require('child_process').exec(
+  'npm run test',
+  function (error, stdout) {
+    console.log(stdout && 'stdout: ' + stdout);
+    if (error !== null) {
+      console.log(error);
+      process.abort(0);
+    }
+  }
+);
