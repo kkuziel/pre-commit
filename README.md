@@ -1,2 +1,2 @@
 # test-pre-commit
-12
+pre-commit sample
