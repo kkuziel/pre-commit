@@ -9,7 +9,7 @@ echo "Runnign lint..."
 npm run lint
 
 echo "Runnint tests..."
-npm run test
+npm run testFail
 
 # pop out stash
 STASHES=$(git stash list)
