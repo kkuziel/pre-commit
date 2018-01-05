@@ -1,4 +1,6 @@
 #!/bin/sh
+mkdir -p .git/hooks
+
 if [ -f .git/hooks/pre-commit ]; then
   rm .git/hooks/pre-commit
 fi
