@@ -1,23 +1,17 @@
 {
-  "name": "test-pre-commit",
+  "name": "pre-commit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Empty test\" && exit 0",
     "testFail": "echo \"Fail test\" && exit 1",
     "postinstall": "bash ./pre-commit-install.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KodernPl/test-pre-commit.git"
+    "url": "git+https://github.com/KodernPl/pre-commit.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KodernPl/test-pre-commit/issues"
-  },
-  "homepage": "https://github.com/KodernPl/test-pre-commit#readme"
+  "author": "KodernPl",
+  "license": "ISC"
 }
