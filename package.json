@@ -10,8 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KodernPl/pre-commit.git"
+    "url": "git+https://github.com/kkuziel/pre-commit.git"
   },
-  "author": "KodernPl",
+  "author": "kkuziel",
   "license": "ISC"
 }
